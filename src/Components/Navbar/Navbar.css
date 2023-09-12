@@ -1,0 +1,34 @@
+.Navbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.navbar-list{
+    display: flex;
+    
+    gap: 56px;
+    list-style: none;
+}
+.navbar-list>li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    
+    
+    
+}
+
+.Signin{
+    
+    display: flex;
+    margin: 11px;
+    cursor: pointer;
+    margin-right: 19px;
+}
+.Signin:hover{
+    text-decoration: underline;
+    font-size: 21px;
+    transition: font-size 0.2s;
+    
+}

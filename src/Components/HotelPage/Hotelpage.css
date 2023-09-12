@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.hoteldata{
+  position: relative;
+}
+.hoteldiv{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.hotelnamecity{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: Inter,sans-serif;
+    font-weight: 400;
+    z-index: 1;
+    
+    
+}
+.blackimg{
+    /* position: absolute; */
+    /* z-index: -1; */
+    position: absolute;
+    height: 297px;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.4;
+}
+.hotelnamecity>h1{
+    font-size: 36px;
+}
+.hotelnamecity>div{
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 14px;
+}
+
+.hotelimg{
+    /* z-index: -1; */
+    width: 100vw;
+    height: 297px;
+}
+.roomsdiv{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    padding: 12px;
+    /* width: 256px; */
+    padding-bottom: 13px;
+    font-family: Inter,sans-serif;
+}
+.rooms{
+  display: flex;
+  margin-top: 67px;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  /* width: 345px; */
+  
+  justify-content: space-evenly;
+  position: relative;
+}
+@media only screen and (max-width: 600px){
+  .roomsdiv{
+    width: 300px;
+    
+  }
+  .rooms{
+    gap: 45px;
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  /* Update the class name to target the image slider in the media query */
+  .imageslider {
+    width: 50%; /* Set the width to 100% for mobile screens */
+    /* Add any other mobile-specific styles here */
+  }
+}
+.imageslider{
+  position: absolute;
+}
+.room-guest{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.room-guest>div{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.roomname{
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  
+}
+.roomprice{
+  font-weight: 700;
+  font-size: 18px;
+
+}
+.amenities{
+  width: 145px;
+  height: 34px;
+  border-radius: 2px;
+  border: 1px solid #0A66BB;
+  color: #0A66BB;
+  background-color: white;
+  cursor: pointer;
+}
+.blackimg1{
+  position: absolute;
+    height: 256px;
+    width: 500px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+}
+.amenities-list{
+  position: absolute;
+  top: 12px;
+  
+
+  z-index: 1;
+  
+}
+.amenities-items{
+  position: relative;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  /* align-items: center; */
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.amenities:hover{
+  background-color: #0A66BB;
+  color: white;
+}
+
+.room-buttons{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+
+}
+.book-btn{
+  width: 152px;
+  height: 34px;
+  border-radius: 2px;
+  border: 1px solid #0A66BB;
+  color: white;
+  background-color: #0A66BB;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  
+}
+.book-btn:hover{
+  color: #0A66BB;
+  background-color: white;
+}
+.hoteldesc{
+  position: relative;
+  top: 67px;
+  font-family: Inter,sans-serif;
+  padding: 12px;
+  margin-bottom: 80px;
+  
+}
+.hoteldesc>h1{
+  font-weight: 400;
+  font-size: 20px;
+}
+.hoteldesc>div{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* 
+booking modal css */
+
+.booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  backdrop-filter: blur(5px); /* Semi-transparent background */
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above other contents */
+  font-family: Inter,sans-serif;
+  color: black;
+}
+.book-modal{
+  background-color: white;
+  display: flex;
+  position: relative;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+.hotelroomname{
+  display: flex;
+  /* position: absolute; */
+  
+  align-items: center;
+  
+}
+.modal-roomname{
+  font-weight: 400;
+  font-size: 16px;
+}
+.imageslider{
+  display: flex;
+  /* position: absolute; */
+}
+.hotelroomname{
+  font-weight: 400;
+  font-size: 22px;
+}
+.modalammenities{
+  margin-top: 155px;
+  display: flex;
+  list-style: none;
+  /* gap: 5px; */
+  color: black;
+  flex-wrap: wrap;
+  /* position: relative; */
+  width: 380;
+  /* justify-content: flex-start; */
+  /* position: absolute; */
+  
+  
+  
+  
+}
+.modalammenities_items{
+  
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #0A66BB;
+  padding: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  flex-wrap: wrap;
+  margin: 3px;
+  
+}
+.modalcheckinout{
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 96px;
+  
+  /* font-size: 14px; */
+}
+
+.checkinout1{
+  display: flex;
+  
+  border: 1px solid #878787;
+  height: 34px;
+  width: 290px;
+  padding: 5px;
+  align-items: center;
+  
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-evenly;
+}
+.checkinout2{
+  display: flex;
+  
+  /* border: 1px solid #878787; */
+  height: 34px;
+  width: 290px;
+  padding: 5px;
+  align-items: center;
+  
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-evenly;
+}
+.line1{
+  flex-grow: 1;
+  /* position: absolute; */
+  height: 0.1px;
+  /* width: 1px; */
+  background-color: #000; /* Color of the separator line */
+  margin: 0 65px;
+  transform: rotate(90deg);
+}
+.gender-button{
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 5px, 0px, 0px, 5px;
+  background-color: white;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #878787;
+  cursor: pointer;
+}
+.gender-button.active {
+  background-color: #878787;
+  color: white;
+}
+.room-book{
+  width: 276px;
+  height: 34px;
+  border-radius: 2px;
+  border: 1px solid #0A66BB;
+  background-color: #0A66BB;
+  margin-top: 38px;
+  color: white;
+  cursor: pointer;
+}
+.close-button{
+  display: flex;
+  font-size: 22px;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+
+
+
+
+
+  

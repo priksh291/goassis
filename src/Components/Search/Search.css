@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.bg-box{
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+.img-container>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    
+}
+.img-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.white-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 1;
+    border-color: black;
+}
+.contents{
+    position: absolute;
+    z-index: 1;
+    top: 128px;
+    left: 72px;
+    
+}
+.about{
+    height: 727px; 
+    width: 70%;
+    position: relative;
+    
+    
+    
+}
+
+@media only screen and (max-width: 600px){
+    .booking-section{
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 768px){
+    .booking-section{
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 911px){
+    .booking-section{
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+}
+
+
+.about>h1{
+    font-size: 40px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+}
+.about>p{
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.search-box{
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+.results-list{
+    width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-height: 150px;
+  overflow-y: auto;
+  cursor: pointer;
+  gap: 5px;
+}
+@media only screen and (max-width: 600px){
+    .results-list{
+        max-height: 50px;
+        overflow-y: scroll;
+    }
+}
+
+.results-list>div:hover{
+    background-color: #878787;
+    color: white;
+}
+.input-button{
+    display: flex;
+    position: relative;
+    width: 276px;
+    height: 34px;
+
+}
+.input-button>input{
+    /* position: relative; */
+    padding: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 2px;
+    height: 34px;
+    width: 276px;
+    
+    border-color: #878787;
+    
+}
+.input-button>input::placeholder{
+    font-family: Inter,sans-serif;
+    font-size: 14px;
+    font-weight: 400px;
+}
+.icon1{
+    position: absolute;
+    top: 15px;
+    left: 3px;
+    color: blue;
+    font-size: x-large;
+    
+}
+.icon2{
+    position: absolute;
+    left: 245px;
+    top: 15px;
+    color: blue;
+    font-size: x-large;
+}
+.booking-section{
+    position: relative;
+    display: flex;
+    
+    top: 100px;
+    /* gap: 200px; */
+    justify-content: space-between;
+}
+.checkinout{
+    position: relative;
+    display: flex;
+    border: 2px solid #878787;
+    padding: 6px;
+    height: 34px;
+    width:200px;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 14px;
+    font-family: Inter,sans-serif;
+    font-weight: 400;
+
+    
+}
+.datepick{
+    position: absolute;
+    /* align-items: center; */
+    /* text-align: center; */
+    justify-content: center;
+}
+.line{
+    flex-grow: 1;
+    /* position: absolute; */
+    height: 0.5px;
+    background-color: #000; /* Color of the separator line */
+    margin: 0 16px;
+    transform: rotate(90deg);
+}
+
+
+.date-picker{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    
+    
+    
+    
+    
+}
+
+.nopeople{
+    display: flex;
+    /* position: absolute; */
+    padding: 6px;
+    height: 20px;
+    /* justify-content: center; */
+    
+    font-family: Inter,sans-serif;
+    
+    /* width: 20px; */
+    
+   
+}
+.nopeople>select{
+    padding: 6px;
+    height: 37px;
+    width: 60px;
+    border-radius: 2px;
+}
+.search{
+    position: relative;
+}
+.searchbtn{
+    padding: 6px;
+    height: 38px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+    background-color: blue;
+    
+}
+.exploresection{
+    position: relative;
+    margin-top: 45px;
+}
+@media only screen and (max-width: 600px){
+    .exploresection{
+        margin-top: 696px;
+        
+    }
+}
+@media only screen and (max-width: 300px){
+    .exploresection{
+        margin-top: 696px;
+        
+    }
+}
+@media only screen and (max-width: 768px){
+    .exploresection{
+        margin-top: 696px;
+        
+    }
+}
+@media only screen and (max-width: 911px){
+    .exploresection{
+        margin-top: 696px;
+        
+    }
+}

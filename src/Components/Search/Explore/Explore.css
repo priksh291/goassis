@@ -1,0 +1,80 @@
+.exploreHotels{
+    position: relative;
+    font-family: Inter, sans-serif;
+    margin-top: 7px;
+}
+.Heading{
+    font-size: 24px;
+    font-weight: 400;
+    align-self: center;
+    text-align: center;
+}
+.hotels-filters{
+    position: relative;
+    display: flex;
+    /* justify-content: space-center; */
+}
+.hotel-details{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 6px;
+    justify-content: space-evenly;
+   
+}
+.hotel-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #878787;
+    padding: 3px;
+    height: 335px;
+    width: 290px;
+    
+    /* gap: 8px; */
+    
+}
+.hotel-img{
+    width: 260px;
+    height: 200px;
+    /* position: absolute; */
+}
+
+.book-btn1{
+    width: 117px;
+    height: 34px;
+    border-radius: 2px;
+    border: 1px solid #0A66BB;
+    color: white;
+    background-color: #0A66BB;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+  }
+  .book-btn1:hover{
+    color: #0A66BB;
+    background-color: white;
+  }
+
+.dropdown{
+    /* position: absolute; */
+    /* margin-top: -6px; */
+    height: 32px;
+    width: 100px;
+    cursor: pointer;
+    /* margin-left: 60px; */
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    align-items: center;
+}
+.pagination>button{
+    width: 57px;
+    height: 32px;
+    border-radius: 3px;
+    border: 2px solid #878787;
+}
