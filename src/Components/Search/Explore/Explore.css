@@ -12,11 +12,17 @@
 .hotels-filters{
     position: relative;
     display: flex;
-    /* justify-content: space-center; */
+    /* justify-content: space-evenly; */
+}
+.explore-hotels{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 45px;
 }
 .hotel-details{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: relative;
     gap: 6px;
     justify-content: space-evenly;
@@ -25,6 +31,7 @@
 .hotel-box{
     display: flex;
     flex-direction: column;
+    
     border: 1px solid #878787;
     padding: 3px;
     height: 335px;
@@ -34,8 +41,9 @@
     
 }
 .hotel-img{
-    width: 260px;
+    width: 290px;
     height: 200px;
+
     /* position: absolute; */
 }
 
@@ -77,4 +85,10 @@
     height: 32px;
     border-radius: 3px;
     border: 2px solid #878787;
+}
+.Nohotels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
 }
