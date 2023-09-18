@@ -8,6 +8,9 @@ const BookNow = () => {
 
   const [isLoading, setIsLoading] = useState(true); // Add loading state
   const [selectedPriceRange, setSelectedPriceRange] = useState(null);
+  const [selectedRatingRange, setSelectedRatingRange] = useState(null);
+  const [selectedPlaces, setSelectedPlaces] = useState([]);
+
 
   useEffect(() => {
     const fetchHotels = async () => {
@@ -114,7 +117,71 @@ const BookNow = () => {
   };
 
   // Filter hotels based on the selected price range
-  const filteredHotels = hotels.filter(filterHotelsByPriceRange);
+  // const filteredHotels = hotels.filter(filterHotelsByPriceRange);
+
+  // Function to filter hotels based on the selected rating range
+  const filterHotelsByRating = (hotel) => {
+    if (selectedRatingRange === null) {
+      return true; // If no rating range is selected, show all hotels
+    }
+
+    const ratingRanges = {
+      "0-1": { min: 0, max: 1 },
+      "1-2": { min: 1, max: 2 },
+      "2-3": { min: 2, max: 3 },
+      "3-4": { min: 3, max: 4 },
+      "4-5": { min: 4, max: 5 },
+    };
+
+    const selectedRange = ratingRanges[selectedRatingRange];
+    if (!selectedRange) {
+      return true; // Invalid rating range selected, show all hotels
+    }
+
+    const hotelRating = hotel.rating;
+
+    // Check if the hotel rating is within the selected range
+    return (
+      hotelRating >= selectedRange.min && hotelRating < selectedRange.max
+    );
+  };
+
+  // Handle checkbox click to set the selected rating range
+  const handleRatingCheckboxClick = (range) => {
+    if (selectedRatingRange === range) {
+      setSelectedRatingRange(null); // Uncheck the checkbox if it's already selected
+    } else {
+      setSelectedRatingRange(range); // Set the selected rating range
+    }
+  };
+
+  // Function to filter hotels based on the selected city or place
+  const filterHotelsByPlace = (hotel) => {
+    if (selectedPlaces.length === 0) {
+      return true; // If no places are selected, show all hotels
+    }
+
+    return selectedPlaces.includes(hotel.city);
+  };
+
+  // Handle checkbox click to set the selected places
+  const handlePlaceCheckboxClick = (place) => {
+    const updatedSelectedPlaces = [...selectedPlaces];
+    if (updatedSelectedPlaces.includes(place)) {
+      // If place is already selected, remove it
+      updatedSelectedPlaces.splice(updatedSelectedPlaces.indexOf(place), 1);
+    } else {
+      // If place is not selected, add it
+      updatedSelectedPlaces.push(place);
+    }
+    setSelectedPlaces(updatedSelectedPlaces); // Update selected places
+  };
+
+  // Filter hotels based on the selected rating range
+  const filteredHotels = hotels
+    .filter(filterHotelsByPriceRange)
+    .filter(filterHotelsByRating)
+    .filter(filterHotelsByPlace);
 
   return (
     <div>
@@ -191,45 +258,59 @@ const BookNow = () => {
                   Above Rs.5000
                 </div>
               </div>
-              <div>
+              <div className="rating">
                 <h3>Rating</h3>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox" 
+                    onChange={() => handleRatingCheckboxClick("0-1")}
+                  />
                   0-1 Star
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handleRatingCheckboxClick("1-2")} />
                   1-2 Star
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handleRatingCheckboxClick("2-3")} />
                   2-3 Star
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handleRatingCheckboxClick("3-4")} />
                   3-4 Star
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handleRatingCheckboxClick("4-5")} />
                   4-5 Star
                 </div>
               </div>
-              <div>
+              <div className="placefilter">
                 <h3>City</h3>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handlePlaceCheckboxClick("Mumbai")}
+                  checked={selectedPlaces.includes("Mumbai")} />
                   Mumbai
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handlePlaceCheckboxClick("Kolkata")}
+                  checked={selectedPlaces.includes("Kolkata")} />
                   Kolkata
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handlePlaceCheckboxClick("Banglore")}
+                  checked={selectedPlaces.includes("Banglore")} />
                   Banglore
                 </div>
                 <div>
-                  <input type="checkbox" />
+                  <input type="checkbox"
+                  onChange={() => handlePlaceCheckboxClick("Jaipur")}
+                  checked={selectedPlaces.includes("Jaipur")} />
                   jaipur
                 </div>
               </div>
